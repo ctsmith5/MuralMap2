@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF4D873D22FCB39B00C97EF0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4D873C22FCB39B00C97EF0 /* CloudKit.framework */; };
+		AF4D874022FCB49900C97EF0 /* MuralListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D873F22FCB49900C97EF0 /* MuralListTableViewController.swift */; };
+		AF5DE4F022FC863400A62199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DE4EF22FC863400A62199 /* AppDelegate.swift */; };
+		AF5DE4F522FC863400A62199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5DE4F322FC863400A62199 /* Main.storyboard */; };
+		AF5DE4F722FC863800A62199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5DE4F622FC863800A62199 /* Assets.xcassets */; };
+		AF5DE4FA22FC863800A62199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5DE4F822FC863800A62199 /* LaunchScreen.storyboard */; };
+		AF5DE50522FC863800A62199 /* MuralMap2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DE50422FC863800A62199 /* MuralMap2Tests.swift */; };
+		AF7ACE6F22FC8B3E0083C5AA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE6E22FC8B3E0083C5AA /* Models.swift */; };
+		AF7ACE7222FC8B910083C5AA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE7122FC8B910083C5AA /* Extensions.swift */; };
+		AF7ACE7522FC8BD50083C5AA /* ChicagoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE7422FC8BD50083C5AA /* ChicagoClient.swift */; };
+		AF7ACE7722FC8C090083C5AA /* MuralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE7622FC8C090083C5AA /* MuralController.swift */; };
+		AF7ACE7922FC8C310083C5AA /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE7822FC8C310083C5AA /* UserController.swift */; };
+		AF7ACE7B22FC8C650083C5AA /* CloudKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE7A22FC8C650083C5AA /* CloudKitController.swift */; };
+		AF7ACE7D22FC8C8C0083C5AA /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE7C22FC8C8C0083C5AA /* FavoritesController.swift */; };
+		AF7ACE8022FC8CE00083C5AA /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE7F22FC8CE00083C5AA /* MainScreenViewController.swift */; };
+		AF7ACE8222FC8D110083C5AA /* MuralDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE8122FC8D110083C5AA /* MuralDetailViewController.swift */; };
+		AF7ACE8422FC8D4C0083C5AA /* TourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE8322FC8D4C0083C5AA /* TourController.swift */; };
+		AF7ACE8622FC8D860083C5AA /* MuralCommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE8522FC8D860083C5AA /* MuralCommentsTableViewController.swift */; };
+		AF7ACE8822FC8DAA0083C5AA /* MuralCommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE8722FC8DAA0083C5AA /* MuralCommentsTableViewCell.swift */; };
+		AF7ACE8A22FC8DEB0083C5AA /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE8922FC8DEB0083C5AA /* NavigationViewController.swift */; };
+		AF7ACE8C22FC8E140083C5AA /* FakeLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE8B22FC8E140083C5AA /* FakeLocation.swift */; };
+		AF7ACE8E22FC8E420083C5AA /* NavigationStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE8D22FC8E420083C5AA /* NavigationStepsTableViewCell.swift */; };
+		AF7ACE9022FC8E8D0083C5AA /* MuralListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE8F22FC8E8D0083C5AA /* MuralListTableViewCell.swift */; };
+		AF7ACE9222FC8EB30083C5AA /* TourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE9122FC8EB30083C5AA /* TourTableViewCell.swift */; };
+		AF7ACE9422FC8F020083C5AA /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE9322FC8F020083C5AA /* FavoritesTableViewController.swift */; };
+		AF7ACE9622FC8F2E0083C5AA /* TourDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE9522FC8F2E0083C5AA /* TourDetailViewController.swift */; };
+		AF7ACE9822FC8F4D0083C5AA /* TourListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7ACE9722FC8F4D0083C5AA /* TourListViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF5DE50122FC863800A62199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF5DE4E422FC863400A62199 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF5DE4EB22FC863400A62199;
+			remoteInfo = MuralMap2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF4D873C22FCB39B00C97EF0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		AF4D873F22FCB49900C97EF0 /* MuralListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralListTableViewController.swift; sourceTree = "<group>"; };
+		AF5DE4EC22FC863400A62199 /* MuralMap2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuralMap2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5DE4EF22FC863400A62199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF5DE4F422FC863400A62199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF5DE4F622FC863800A62199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF5DE4F922FC863800A62199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF5DE4FB22FC863800A62199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5DE50022FC863800A62199 /* MuralMap2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuralMap2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5DE50422FC863800A62199 /* MuralMap2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralMap2Tests.swift; sourceTree = "<group>"; };
+		AF5DE50622FC863800A62199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7ACE6E22FC8B3E0083C5AA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AF7ACE7122FC8B910083C5AA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AF7ACE7422FC8BD50083C5AA /* ChicagoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChicagoClient.swift; sourceTree = "<group>"; };
+		AF7ACE7622FC8C090083C5AA /* MuralController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralController.swift; sourceTree = "<group>"; };
+		AF7ACE7822FC8C310083C5AA /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		AF7ACE7A22FC8C650083C5AA /* CloudKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitController.swift; sourceTree = "<group>"; };
+		AF7ACE7C22FC8C8C0083C5AA /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
+		AF7ACE7F22FC8CE00083C5AA /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		AF7ACE8122FC8D110083C5AA /* MuralDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralDetailViewController.swift; sourceTree = "<group>"; };
+		AF7ACE8322FC8D4C0083C5AA /* TourController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourController.swift; sourceTree = "<group>"; };
+		AF7ACE8522FC8D860083C5AA /* MuralCommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralCommentsTableViewController.swift; sourceTree = "<group>"; };
+		AF7ACE8722FC8DAA0083C5AA /* MuralCommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralCommentsTableViewCell.swift; sourceTree = "<group>"; };
+		AF7ACE8922FC8DEB0083C5AA /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		AF7ACE8B22FC8E140083C5AA /* FakeLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLocation.swift; sourceTree = "<group>"; };
+		AF7ACE8D22FC8E420083C5AA /* NavigationStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStepsTableViewCell.swift; sourceTree = "<group>"; };
+		AF7ACE8F22FC8E8D0083C5AA /* MuralListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralListTableViewCell.swift; sourceTree = "<group>"; };
+		AF7ACE9122FC8EB30083C5AA /* TourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourTableViewCell.swift; sourceTree = "<group>"; };
+		AF7ACE9322FC8F020083C5AA /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		AF7ACE9522FC8F2E0083C5AA /* TourDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailViewController.swift; sourceTree = "<group>"; };
+		AF7ACE9722FC8F4D0083C5AA /* TourListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourListViewController.swift; sourceTree = "<group>"; };
+		AF7ACE9922FC9FDC0083C5AA /* MuralMap2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MuralMap2.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF5DE4E922FC863400A62199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4D873D22FCB39B00C97EF0 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5DE4FD22FC863800A62199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF4D873B22FCB39B00C97EF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D873C22FCB39B00C97EF0 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF4D873E22FCB46E00C97EF0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D873F22FCB49900C97EF0 /* MuralListTableViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AF5DE4E322FC863400A62199 = {
+			isa = PBXGroup;
+			children = (
+				AF5DE4EE22FC863400A62199 /* MuralMap2 */,
+				AF5DE50322FC863800A62199 /* MuralMap2Tests */,
+				AF5DE4ED22FC863400A62199 /* Products */,
+				AF4D873B22FCB39B00C97EF0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF5DE4ED22FC863400A62199 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF5DE4EC22FC863400A62199 /* MuralMap2.app */,
+				AF5DE50022FC863800A62199 /* MuralMap2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF5DE4EE22FC863400A62199 /* MuralMap2 */ = {
+			isa = PBXGroup;
+			children = (
+				AF7ACE9922FC9FDC0083C5AA /* MuralMap2.entitlements */,
+				AF7ACE7E22FC8CCC0083C5AA /* ViewControllers */,
+				AF7ACE7322FC8BB40083C5AA /* ModelControllers */,
+				AF7ACE7022FC8B630083C5AA /* Helpers and Extensions */,
+				AF7ACE6D22FC8B1F0083C5AA /* Views */,
+				AF7ACE6C22FC8B180083C5AA /* Models */,
+				AF5DE4EF22FC863400A62199 /* AppDelegate.swift */,
+				AF5DE4F322FC863400A62199 /* Main.storyboard */,
+				AF5DE4F622FC863800A62199 /* Assets.xcassets */,
+				AF5DE4F822FC863800A62199 /* LaunchScreen.storyboard */,
+				AF5DE4FB22FC863800A62199 /* Info.plist */,
+			);
+			path = MuralMap2;
+			sourceTree = "<group>";
+		};
+		AF5DE50322FC863800A62199 /* MuralMap2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF5DE50422FC863800A62199 /* MuralMap2Tests.swift */,
+				AF5DE50622FC863800A62199 /* Info.plist */,
+			);
+			path = MuralMap2Tests;
+			sourceTree = "<group>";
+		};
+		AF7ACE6C22FC8B180083C5AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF7ACE6E22FC8B3E0083C5AA /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF7ACE6D22FC8B1F0083C5AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF7ACE8722FC8DAA0083C5AA /* MuralCommentsTableViewCell.swift */,
+				AF7ACE8D22FC8E420083C5AA /* NavigationStepsTableViewCell.swift */,
+				AF7ACE8F22FC8E8D0083C5AA /* MuralListTableViewCell.swift */,
+				AF7ACE9122FC8EB30083C5AA /* TourTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF7ACE7022FC8B630083C5AA /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF7ACE7122FC8B910083C5AA /* Extensions.swift */,
+				AF7ACE8B22FC8E140083C5AA /* FakeLocation.swift */,
+			);
+			path = "Helpers and Extensions";
+			sourceTree = "<group>";
+		};
+		AF7ACE7322FC8BB40083C5AA /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF7ACE7422FC8BD50083C5AA /* ChicagoClient.swift */,
+				AF7ACE7622FC8C090083C5AA /* MuralController.swift */,
+				AF7ACE7822FC8C310083C5AA /* UserController.swift */,
+				AF7ACE7A22FC8C650083C5AA /* CloudKitController.swift */,
+				AF7ACE7C22FC8C8C0083C5AA /* FavoritesController.swift */,
+				AF7ACE8322FC8D4C0083C5AA /* TourController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		AF7ACE7E22FC8CCC0083C5AA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D873E22FCB46E00C97EF0 /* New Group */,
+				AF7ACE7F22FC8CE00083C5AA /* MainScreenViewController.swift */,
+				AF7ACE8122FC8D110083C5AA /* MuralDetailViewController.swift */,
+				AF7ACE8522FC8D860083C5AA /* MuralCommentsTableViewController.swift */,
+				AF7ACE8922FC8DEB0083C5AA /* NavigationViewController.swift */,
+				AF7ACE9322FC8F020083C5AA /* FavoritesTableViewController.swift */,
+				AF7ACE9522FC8F2E0083C5AA /* TourDetailViewController.swift */,
+				AF7ACE9722FC8F4D0083C5AA /* TourListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF5DE4EB22FC863400A62199 /* MuralMap2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5DE50922FC863800A62199 /* Build configuration list for PBXNativeTarget "MuralMap2" */;
+			buildPhases = (
+				AF5DE4E822FC863400A62199 /* Sources */,
+				AF5DE4E922FC863400A62199 /* Frameworks */,
+				AF5DE4EA22FC863400A62199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuralMap2;
+			productName = MuralMap2;
+			productReference = AF5DE4EC22FC863400A62199 /* MuralMap2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF5DE4FF22FC863800A62199 /* MuralMap2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5DE50C22FC863800A62199 /* Build configuration list for PBXNativeTarget "MuralMap2Tests" */;
+			buildPhases = (
+				AF5DE4FC22FC863800A62199 /* Sources */,
+				AF5DE4FD22FC863800A62199 /* Frameworks */,
+				AF5DE4FE22FC863800A62199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF5DE50222FC863800A62199 /* PBXTargetDependency */,
+			);
+			name = MuralMap2Tests;
+			productName = MuralMap2Tests;
+			productReference = AF5DE50022FC863800A62199 /* MuralMap2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF5DE4E422FC863400A62199 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Colin Smith";
+				TargetAttributes = {
+					AF5DE4EB22FC863400A62199 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					AF5DE4FF22FC863800A62199 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = AF5DE4EB22FC863400A62199;
+					};
+				};
+			};
+			buildConfigurationList = AF5DE4E722FC863400A62199 /* Build configuration list for PBXProject "MuralMap2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF5DE4E322FC863400A62199;
+			productRefGroup = AF5DE4ED22FC863400A62199 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF5DE4EB22FC863400A62199 /* MuralMap2 */,
+				AF5DE4FF22FC863800A62199 /* MuralMap2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF5DE4EA22FC863400A62199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5DE4FA22FC863800A62199 /* LaunchScreen.storyboard in Resources */,
+				AF5DE4F722FC863800A62199 /* Assets.xcassets in Resources */,
+				AF5DE4F522FC863400A62199 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5DE4FE22FC863800A62199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF5DE4E822FC863400A62199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7ACE7922FC8C310083C5AA /* UserController.swift in Sources */,
+				AF5DE4F022FC863400A62199 /* AppDelegate.swift in Sources */,
+				AF7ACE7722FC8C090083C5AA /* MuralController.swift in Sources */,
+				AF7ACE9222FC8EB30083C5AA /* TourTableViewCell.swift in Sources */,
+				AF7ACE9822FC8F4D0083C5AA /* TourListViewController.swift in Sources */,
+				AF7ACE8622FC8D860083C5AA /* MuralCommentsTableViewController.swift in Sources */,
+				AF7ACE8C22FC8E140083C5AA /* FakeLocation.swift in Sources */,
+				AF7ACE9022FC8E8D0083C5AA /* MuralListTableViewCell.swift in Sources */,
+				AF7ACE8222FC8D110083C5AA /* MuralDetailViewController.swift in Sources */,
+				AF7ACE7D22FC8C8C0083C5AA /* FavoritesController.swift in Sources */,
+				AF7ACE9622FC8F2E0083C5AA /* TourDetailViewController.swift in Sources */,
+				AF7ACE8422FC8D4C0083C5AA /* TourController.swift in Sources */,
+				AF7ACE8822FC8DAA0083C5AA /* MuralCommentsTableViewCell.swift in Sources */,
+				AF7ACE7222FC8B910083C5AA /* Extensions.swift in Sources */,
+				AF7ACE7B22FC8C650083C5AA /* CloudKitController.swift in Sources */,
+				AF4D874022FCB49900C97EF0 /* MuralListTableViewController.swift in Sources */,
+				AF7ACE8E22FC8E420083C5AA /* NavigationStepsTableViewCell.swift in Sources */,
+				AF7ACE6F22FC8B3E0083C5AA /* Models.swift in Sources */,
+				AF7ACE7522FC8BD50083C5AA /* ChicagoClient.swift in Sources */,
+				AF7ACE8A22FC8DEB0083C5AA /* NavigationViewController.swift in Sources */,
+				AF7ACE8022FC8CE00083C5AA /* MainScreenViewController.swift in Sources */,
+				AF7ACE9422FC8F020083C5AA /* FavoritesTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5DE4FC22FC863800A62199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5DE50522FC863800A62199 /* MuralMap2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF5DE50222FC863800A62199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF5DE4EB22FC863400A62199 /* MuralMap2 */;
+			targetProxy = AF5DE50122FC863800A62199 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF5DE4F322FC863400A62199 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5DE4F422FC863400A62199 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF5DE4F822FC863800A62199 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5DE4F922FC863800A62199 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF5DE50722FC863800A62199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF5DE50822FC863800A62199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF5DE50A22FC863800A62199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MuralMap2/MuralMap2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2779EQ3QB6;
+				INFOPLIST_FILE = MuralMap2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colinsmith.MuralMap2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AF5DE50B22FC863800A62199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MuralMap2/MuralMap2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2779EQ3QB6;
+				INFOPLIST_FILE = MuralMap2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colinsmith.MuralMap2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AF5DE50D22FC863800A62199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2779EQ3QB6;
+				INFOPLIST_FILE = MuralMap2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colinsmith.MuralMap2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuralMap2.app/MuralMap2";
+			};
+			name = Debug;
+		};
+		AF5DE50E22FC863800A62199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2779EQ3QB6;
+				INFOPLIST_FILE = MuralMap2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colinsmith.MuralMap2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuralMap2.app/MuralMap2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF5DE4E722FC863400A62199 /* Build configuration list for PBXProject "MuralMap2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5DE50722FC863800A62199 /* Debug */,
+				AF5DE50822FC863800A62199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF5DE50922FC863800A62199 /* Build configuration list for PBXNativeTarget "MuralMap2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5DE50A22FC863800A62199 /* Debug */,
+				AF5DE50B22FC863800A62199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF5DE50C22FC863800A62199 /* Build configuration list for PBXNativeTarget "MuralMap2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5DE50D22FC863800A62199 /* Debug */,
+				AF5DE50E22FC863800A62199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF5DE4E422FC863400A62199 /* Project object */;
+}
