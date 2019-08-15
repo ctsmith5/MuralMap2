@@ -88,66 +88,43 @@ class MuralCommentsTableViewController: UITableViewController {
     
     
     @IBAction func postCommentButtonPressed(_ sender: UIButton) {
-        
-        if MuralController.shared.userCommenting != "" {
-            
-            // New Comment Formatting
-            
-            //Grab text out of the textView
-            guard let newCommentContent = commentsTextField.text else {return}
-            // Guard against it being nil empty or containing "Leave a comment..."
-            
-            //Run all the shenanigans we figured out including the Activity Indicator
-            guard let art = self.streetArt else {return}
-            if commentsTextField.text != "" {
+        guard let newCommentContent = self.commentsTextField.text else {return}
+        CKContainer.default().accountStatus { (accountStatus, error) in
+            switch accountStatus {
+            case .available:
                 
-                MuralController.shared.fetchMuralByID(muralID: art.muralID) { (mural) in
-                    if let mural = mural {
-                        let muralReference = CKRecord.Reference(recordID: mural.recordID, action: .deleteSelf)
-                        let newComment = Comment(text: newCommentContent, muralReference: muralReference, user: MuralController.shared.userCommenting)
-                        
-                        MuralController.shared.saveComment(comment: newComment, mural: mural) { (success) in
-                            print("we successfully saved a comment on the dispatch group singleton")
-                            
-                            if success {
-                                DispatchQueue.main.async {
-                                    self.newCommentActivityIndicator.startAnimating()
-                                }
-                                sleep(4)
-                                MuralController.shared.fetchComments(mural: mural) { (comments) in
-                                    
-                                    // Run after dispatch group clean
-                                    
-                                    MuralController.shared.dispatchGroup.notify(queue: .main) {
-                                        self.comments = comments
-                                        self.tableView.reloadData()
-                                        self.newCommentActivityIndicator.stopAnimating()
-                                    }
-                                }
-                            }
-                            else {
-                                print("no saveComments completion success")
-                            }
-                        }
-                    }
-                    else {
-                        //if nil, initialize new mural and pass it into the save function
-                        let newMural = Mural(muralID: art.muralID)
-                        MuralController.shared.saveMural(muralID: newMural.muralID, hasComment: true) { (mural) in
-                            //not sure why we need to complete with this
-                            guard let mural = mural else {return}
+                if MuralController.shared.userCommenting != "" {
+                    
+                    // New Comment Formatting
+                    
+                    //Grab text out of the textView
+                    
+                    // Guard against it being nil empty or containing "Leave a comment..."
+                    
+                    //Run all the shenanigans we figured out including the Activity Indicator
+                    guard let art = self.streetArt else {return}
+                    
+                    MuralController.shared.fetchMuralByID(muralID: art.muralID) { (mural) in
+                        if let mural = mural {
                             let muralReference = CKRecord.Reference(recordID: mural.recordID, action: .deleteSelf)
                             let newComment = Comment(text: newCommentContent, muralReference: muralReference, user: MuralController.shared.userCommenting)
                             
                             MuralController.shared.saveComment(comment: newComment, mural: mural) { (success) in
-                                print("we successfully saved a comment")
-                                sleep(4)
-                                //Might need to present some Activity Indicator UI
+                                print("we successfully saved a comment on the dispatch group singleton")
+                                
                                 if success {
+                                    DispatchQueue.main.async {
+                                        self.newCommentActivityIndicator.startAnimating()
+                                    }
+                                    sleep(4)
                                     MuralController.shared.fetchComments(mural: mural) { (comments) in
+                                        
+                                        // Run after dispatch group clean
+                                        
                                         MuralController.shared.dispatchGroup.notify(queue: .main) {
                                             self.comments = comments
                                             self.tableView.reloadData()
+                                            self.newCommentActivityIndicator.stopAnimating()
                                         }
                                     }
                                 }
@@ -156,21 +133,68 @@ class MuralCommentsTableViewController: UITableViewController {
                                 }
                             }
                         }
+                        else {
+                            //if nil, initialize new mural and pass it into the save function
+                            let newMural = Mural(muralID: art.muralID)
+                            MuralController.shared.saveMural(muralID: newMural.muralID, hasComment: true) { (mural) in
+                                //not sure why we need to complete with this
+                                guard let mural = mural else {return}
+                                let muralReference = CKRecord.Reference(recordID: mural.recordID, action: .deleteSelf)
+                                let newComment = Comment(text: newCommentContent, muralReference: muralReference, user: MuralController.shared.userCommenting)
+                                
+                                MuralController.shared.saveComment(comment: newComment, mural: mural) { (success) in
+                                    print("we successfully saved a comment")
+                                    sleep(4)
+                                    //Might need to present some Activity Indicator UI
+                                    if success {
+                                        MuralController.shared.fetchComments(mural: mural) { (comments) in
+                                            MuralController.shared.dispatchGroup.notify(queue: .main) {
+                                                self.comments = comments
+                                                self.tableView.reloadData()
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        print("no saveComments completion success")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    DispatchQueue.main.async {
+                        self.commentsTextField.text = ""
+                        self.commentsTextField.resignFirstResponder()
                     }
                 }
+                else{
+                    let deniedAlert = UIAlertController(title: "Enable iCloud User Permissions", message: "In order to enable comments, ensure to Select YES to allow user lookup permissions. Otherwise commenting will not be permitted. Action cannot be undone.", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    deniedAlert.addAction(okAction)
+                    self.present(deniedAlert, animated: true) {
+                        UserController.shared.getFullName()
+                    }
+                    
+                }
                 
+            case .noAccount:
+                DispatchQueue.main.async {
+                    
+                    let accountAlert = UIAlertController(title: "Comments Require iCloud", message: "Navigate to the settings menu in your iPhone and sign into iCloud in order to save favorites.", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    accountAlert.addAction(okAction)
+                    self.present(accountAlert, animated: true, completion: nil)
+                }
+            case .restricted:
+                let accountAlert = UIAlertController(title: "Favorites Requires iCloud", message: "Navigate to the settings menu in your iPhone and sign into iCloud in order to save favorites.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                accountAlert.addAction(okAction)
+                self.present(accountAlert, animated: true, completion: nil)
+            case .couldNotDetermine:
+                let accountAlert = UIAlertController(title: "Favorites Requires iCloud", message: "Navigate to the settings menu in your iPhone and sign into iCloud in order to save favorites.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                accountAlert.addAction(okAction)
+                self.present(accountAlert, animated: true, completion: nil)
             }
-            commentsTextField.text = ""
-            commentsTextField.resignFirstResponder()
-        }
-        else{
-            let deniedAlert = UIAlertController(title: "Enable iCloud User Permissions", message: "In order to enable comments, ensure to Select YES to allow user lookup permissions. Otherwise commenting will not be permitted. Action cannot be undone.", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            deniedAlert.addAction(okAction)
-            self.present(deniedAlert, animated: true) {
-                UserController.shared.getFullName()
-            }
-            
         }
     }
     /*

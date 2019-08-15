@@ -170,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="1796" y="-735"/>
         </scene>
-        <!--Root View Controller-->
+        <!-- -->
         <scene sceneID="tBC-f8-vo8">
             <objects>
                 <tableViewController id="6ix-Vb-XSt" customClass="FavoritesTableViewController" customModule="MuralMap2" customModuleProvider="target" sceneMemberID="viewController">
@@ -225,7 +225,7 @@
                             <outlet property="delegate" destination="6ix-Vb-XSt" id="VUl-5r-80t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="k4T-zT-btV"/>
+                    <navigationItem key="navigationItem" title=" " id="k4T-zT-btV"/>
                     <connections>
                         <outlet property="favoritesActivityIndicator" destination="X2n-cC-dWw" id="tcC-Yd-RAY"/>
                     </connections>
@@ -240,6 +240,7 @@
                 <navigationController id="mdQ-nO-Xlb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="heart" id="7KP-KD-IU9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YGx-Vs-GJN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -659,6 +660,7 @@
                     <tabBarItem key="tabBarItem" title="Murals" image="map" id="JN1-Io-10y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ViN-Oc-2ON">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -57,6 +57,24 @@ class MuralDetailViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func addToFavoritesPressed(_ sender: UIButton) {
+        //check user's iCloud status
+        CKContainer.default().accountStatus { (accountStatus, error) in
+            switch accountStatus {
+            case .available:
+                print("iCloud Available")
+            case .noAccount:
+                let accountAlert = UIAlertController(title: "Favorites Requires iCloud", message: "Navigate to the settings menu in your iPhone and sign into iCloud in order to save favorites.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                accountAlert.addAction(okAction)
+                self.present(accountAlert, animated: true, completion: nil)
+            case .restricted:
+                print("iCloud restricted")
+            case .couldNotDetermine:
+                print("Unable to determine iCloud status")
+            }
+        }
+       
+        
         guard let muralID = streetArt?.muralID,
             let title = streetArt?.title else {return}
         FavoritesController.shared.fetchFavoriteslByID(muralID: muralID) { (success) in
